@@ -1,0 +1,23 @@
+{props.items.filter(
+   expense =>  expense.date.getFullYear(filteredYear).toString() === filteredYear
+  ).map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          ></ExpenseItem>
+        ))}
+
+
+
+
+{filteredExpenses.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          ></ExpenseItem>                 
+        ))}                               {/* Displaying full data with date filters */}
+       

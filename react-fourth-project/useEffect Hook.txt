@@ -1,0 +1,35 @@
+import React,{ useState, useEffect } from 'react'
+
+/* function Sample() {
+
+    const [name, setName] = useState("Ceci");
+  
+    const setTitleHandler = (event) => {
+        setName(event.target.value)
+    }
+
+    document.title = name;
+
+  return (
+    <input value={name} onChange={setTitleHandler} />
+  )
+} */
+
+
+
+
+const Sample = () => {
+  const [name, setName] = useState("Ceci");
+  
+  useEffect(() => {
+    document.title = name;
+  }, [name]);
+
+  return (
+    <input value={name} onChange={event => setName(event.target.value)} />
+  );
+}
+
+export default Sample
+
+
